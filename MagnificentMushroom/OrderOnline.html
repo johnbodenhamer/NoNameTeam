@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Order Online</title>
+<head>
+	<script src="Assets\JavaScripts\functions.js"></script>
+	<link href="Assets\Styles\main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+<h1>Mushrooms</h1>
+
+<div class="menuBar">
+	<a href="index.htm">Home</a></li>
+	<a href="Menu.html">Menu</a></li>
+	<a href="reservations.html">Reservations</a></li>
+	<a href="OrderOnline.html">Order Online</a></li>
+	<a href="contactus.htm">Contact Us</a></li>
+</div>
+
+<div id="dateBox">
+		<script type="text/javascript">
+			document.write("Today is <br />")
+			document.write(showDate());
+		</script>
+		</script>
+			<script type="text/javascript">
+
+				var currentTime = new Date()
+				var hours = currentTime.getHours()
+				var minutes = currentTime.getMinutes()
+
+				if (minutes < 10)
+				{
+				minutes = "0" + minutes
+				}
+				document.write(hours + ":" + minutes + " ")
+					if(hours > 11)
+						{
+						document.write("PM")
+						}
+					else
+					{
+					document.write("AM")
+					}
+
+</script>
+
+         </div>
+
+<section>
+
+         <h1 class="onlinePayment">Payment Form</h1>
+		<form method="post">
+			<fieldset id="billing">
+				<legend>Billing Information (required)</legend>
+					<label for="fName">First Name</label>
+						<input type="text" required="required"/><br>
+					<label for="lName">Last Name</label>
+						<input type="text" required="required"/><br>
+					<label for="street">Street Address</label>
+						<input type="text" required="required" /><br>
+					<label for="street2">Street Address (2)</label>
+						<input type="text" /><br>
+					<label for="city">City</label>
+						<input type="text" required="required"/><br>
+					<label for="State">State</label>
+					<select required>
+						<option value="state1">AL</option> <option value="state2">AK</option> <option value="state3">AZ</option> <option value="state4">AR</option> <option value="state5">CA</option> <option value="state6">CO</option>
+						<option value="state7">CT</option> <option value="state8">DE</option> <option value="state9">FL</option> <option value="state10">GA</option> <option value="state11">HI</option>
+						<option value="state12">ID</option> <option value="state13">IL</option> <option value="state14">IN</option> <option value="state15">IA</option> <option value="state16">KS</option>
+						<option value="state17">KY</option> <option value="state18">LA</option> <option value="state19">AL</option> <option value="state20">ME</option> <option value="state21">MD</option>
+						<option value="state22">MA</option> <option value="state23">MI</option> <option value="state24">MN</option> <option value="state25">MS</option> <option value="state26">MO</option>
+						<option value="state27">MT</option> <option value="state28">NE</option> <option value="state29">NV</option> <option value="state30">NH</option> <option value="state31">NJ</option>
+						<option value="state32">NM</option> <option value="state33">NY</option> <option value="state34">NC</option> <option value="state35">ND</option> <option value="state36">OH</option>
+						<option value="state37">OK</option> <option value="state38">OR</option> <option value="state39">PA</option> <option value="state40">RI</option> <option value="state41">SC</option>
+						<option value="state42">SD</option> <option value="state43">TN</option> <option value="state44">TX</option> <option value="state45">UT</option> <option value="state46">VT</option>
+						<option value="state47">VA</option> <option value="state48">WA</option> <option value="state49">WV</option> <option value="state50">WI</option> <option value="state50">WY</option>
+					</select><br>
+					<label for="zip">ZIP/Postal Code</label>
+						<input type="text" pattern="^\d{5}(\-\d{4})?$" required="required" /><br>
+					<label for="counrty">Counrty</label>
+						<input value="United Sates" required="required" /><br>
+					<label for="phone">Phone</label>
+						<input type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required="required" /><br>
+			</fieldset>
+
+			<fieldset id="creditcard">
+
+			   <legend>Credit Card (required)</legend>
+
+				<fieldset class="optionGroup">
+					<label for="diner">
+						<input type="radio" name="ccard" required="required" />
+							<img src="Assets\Images\diners.png" />
+					</label>
+					<label for="discover">
+						<input type="radio" name="ccard" required="required" />
+							<img src="Assets\Images\discover.png" />
+					</label>
+					<label for="master">
+						<input type="radio" name="ccard" required="required" />
+							<img src="Assets\Images\master.png" />
+					</label>
+					<label for="visa">
+						<input type="radio" name="ccard" required="required" />
+							<img src="Assets\Images\visa.png" />
+					</label>
+
+				</fieldset>
+
+				<label for="ccardnubmer">Credit Card Number</label>
+					<input type="text" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required="required" /><br>
+
+				<label for="ccardmonth">Expiration Date</label>
+					<select required>
+						<option value="">--Month--</option>
+						<option value="month1">January (01)</option><option value="month2">February (02)</option><option value="month3">March (03)</option><option value="month4">April (04)</option>
+						<option value="month5">May (05)</option><option value="month6">June (06)</option><option value="month7">July (07)</option><option value="month8">August (08)</option>
+						<option value="month9">September (09)</option><option value="month10">October (10)</option><option value="month11">November (11)</option><option value="month12">April (12)</option>
+					</select>
+					<select required>
+						<option value="">--Year--</option><option value="year1">2014</option><option value="year2">2015</option
+						<option	value="year3">2016</option><option value="year4">2017</option><option value="year5">2018</option>
+					</select><br>
+				<label for="csc">CSC</label>
+					<input type="text" name="csc" pattern="^\d{3}$" placeholder="nnn" required=""required" />
+			</fieldset>
+
+			<fieldset id="info">
+				<legend>Gift Information</legend>
+					<label for="bday">To:</label>
+						<input type="text"/><br>
+					<label for="bday">From:</label>
+						<input type="text"/><br>
+					<label for="notes">Special Notes</label>
+						<textarea name="notes">
+						</textarea>
+					<label for="Subcription">To Subscribe Enter Email</label>
+						<input type="email" />
+
+			</fieldset>
+
+			<input type="submit" name"submitOrder" value="Submit Order" />
+		</form>
+
+<a href="#top">Go to top</a>
+
+</section>
+
+</body>
+</html>
