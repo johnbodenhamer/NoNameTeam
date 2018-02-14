@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   <meta charset="UTF-8" />
+
+   <title>Contact Us</title>
+
+   <script src="Assets\JavaScripts\modernizr.custom.28018.js"></script>
+   <link href="Assets\Styles\main.css" rel="stylesheet" type="text/css" />
+   <link href="Assets\Styles\csstyle.css" rel="stylesheet" type="text/css" />
+
+   </head>
+
+   <body>
+
+      <header>
+	       <img src="Assets\Images\mm.png" alt="Failed Image" />
+	    </header>
+
+	      <div class="menuBar">
+		     <a href="index.htm">Home</a>
+			   <a href="Menu.html">Menu</a>
+	       <a href="reservations.html">Reservations</a>
+			   <a href="OrderOnline.html">Order Online</a>
+			   <a href="contactus.htm">Contact Us</a>
+       </div>
+
+	   <section id="main">
+		  <h1>File out a complant</h1>
+
+          <form name="interestForm" id="intersetForm"
+          action="http://www.youngnotesschool.com/cgi-bin/interest"
+          method="post">
+
+         <fieldset id="contectFields">
+          <legend>Customer Information</legend>
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" required="required" />
+
+		  <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" required="required" />
+
+		  <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="(nnn) nnn-nnnn"
+                 required="required"
+        		 pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4})?$"/>
+
+		  <label for="email">Email</label>
+		  <input type="email" id="email" name="email" />
+
+		</fieldset>
+
+		<fieldset id="otherFields">
+
+		   <legend>Issue Information</legend>
+
+
+		    <label for="ctype" class="blockEntry">Food or Payment</label>
+			<select id="ctype" name="ctype">
+			   <option value="Parent">Food</option>
+			   <option value="Guardian">Payment</option>
+			</select>
+
+			<label for="interest">Problem experienced</label>
+			<select id="interest" name="interest" size="7" multiple="multiple">
+			    <option value="Product not as advertised">Product not as advertised</option>
+				<option value="Delivery">Delivery</option>
+				<option value="Payment">Payment</option>
+				<option value="Cooked Properly">Cooked Properly</option>
+				<option value="Pricing">Pricing</option>
+				<option value="Service">Service</option>
+
+		    </select>
+
+
+	  <input type="checkbox" id="call" name="call" />
+	  <label for="call">Sign me up for the Magnificant Mushroom updates!</label>
+
+	  <input type="submit" value="Submit Information" />
+	  <input type="reset" value="Cancel" />
+	</form>
+  </section>
+
+      <footer>
+	       <address>
+		         Magnificant Mushroom &#183;
+			          1 Magnificant Mushroom ln &#183;
+			             Saint Louis, MO 63129 &#183;
+		     </address>
+	   </footer>
+
+	</body>
+
+</html>
