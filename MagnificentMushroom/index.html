@@ -16,18 +16,73 @@
 
    <body>
      <body>
-         <div id="slider">
-           <ul id="sliderWrapper">
-             <li class="slideLi"><img src="Assets\Images\pic1.jpg" alt="pic1" class="sliderPic" /></li>
-             <li class="slideLi"><img src="Assets\Images\pic2.jpg" alt="pic2" class="sliderPic" /></li>
-             <li class="slideLi"><img src="Assets\Images\pic3.jpg" alt="pic3" class="sliderPic" /></li>
-             <li class="slideLi"><img src="Assets\Images\pic4.jpg" alt="pic4" class="sliderPic" /></li>
-             <li class="slideLi"><img src="Assets\Images\pic5.jpg" alt="pic5" class="sliderPic" /></li>
-             <li class="slideLi"><img src="Assets\Images\pic6.jpg" alt="pic6" class="sliderPic" /></li>
-           </ul>
-           <a href="#" id="prev">&#8810;</a>
-           <a href="#" id="next">&#8811;</a>
+         <div class="sliderContainer">
+             <div class="slides">
+               <img src="Assets\Images\pic1.jpg" alt="pic1" class="sliderPic" />
+             </div>
+
+             <div class="slides">
+                <img src="Assets\Images\pic2.jpg" alt="pic2" class="sliderPic" />
+              </div>
+
+              <div class="slides">
+                <img src="Assets\Images\pic3.jpg" alt="pic3" class="sliderPic" />
+              </div>
+
+              <div class="slides">
+                <img src="Assets\Images\pic4.jpg" alt="pic4" class="sliderPic" />
+              </div>
+
+              <div class="slides">
+                <img src="Assets\Images\pic5.jpg" alt="pic5" class="sliderPic" />
+              </div>
+
+              <div class="slides">
+                <img src="Assets\Images\pic6.jpg" alt="pic6" class="sliderPic" />
+              </div>
+
+           <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+           <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
+          <br>
+          <div style="text-align: center">
+            <span class="dot" onclick="moveSlide(1)"></span>
+            <span class="dot" onclick="moveSlide(2)"></span>
+            <span class="dot" onclick="moveSlide(3)"></span>
+            <span class="dot" onclick="moveSlide(4)"></span>
+            <span class="dot" onclick="moveSlide(5)"></span>
+            <span class="dot" onclick="moveSlide(6)"></span>
+          </div>
+          <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n){
+          showSlides(slideIndex += n);
+          }
+
+          function moveSlides(n){
+            showSlides(slideIndex = n)
+          }
+
+          function showSlides(n){
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if(n < 1) {slideIndex = slides.length}
+            for( i = 0; i < slides.length; i++){
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++){
+              dots[i].className = dots[i].className.replace("active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+          }
+          </script>
+
      	   <div class="menuBar">
      		     <a href="index.html">Home</a>
      			   <a href="Menu.html">Menu</a>
