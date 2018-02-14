@@ -1,0 +1,18 @@
+.section{
+  text-align: center;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+label{
+  font-size: 17px;
+}
+
+.Reservations{
+  font-size: 40px;
+  font-weight: bold;
+}

@@ -1,20 +1,32 @@
+.m {
+  padding-top: 80px;
+}
 table {
   border-collapse: collapse;
   width: 100%
+}
+
+h1{
+  text-align: center;
+  font-size: 70px;
 }
 
 td {
   border: 1px;
   text-align: left;
   padding: 8px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 th{
-  font-size: 20px;
+  font-size: 28px;
   text-align: left;
 }
 
 .btmInfo  {
   margin-left: 100px;
+}
+
+.type {
+  text-align: center;
 }
