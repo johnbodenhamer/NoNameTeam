@@ -96,7 +96,7 @@ h1 {
 }
 
 h2 {
-	font-size: 16px;
+	font-size: 25px;
 	font-weight: bold;
 	letter-spacing: 5px;
   color: rgb(50, 199, 55);
@@ -112,8 +112,14 @@ p {
 	margin: 7px;
 }
 
+.cInfo{
+	margin: 7px;
+	font-size: 25px;
+}
+
 li {
 	margin-left: 50px;
+	font-size: 20px;
 }
 #main {
 	border-top: 2px solid #ffff00;
@@ -201,7 +207,7 @@ img.irregularWrap {
   margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
 }
-
+/*location link picture*/
 .location {
 	width: 20px;
 	height: 20px;
@@ -219,19 +225,19 @@ img.irregularWrap {
 }
 .sliderPic{
 	vertical-align: middle;
-	margin-left: 35%;
-	width: 350px;
+	margin-left: 33%;
+	width: 500px;
 	height: 300px;
 }
-
+/*sliderImage Arrows*/
 .prev, .next{
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
 	width: auto;
 	padding: 16px;
-	margin-left: 350px;
-	margin-right: 360px;
+	margin-left: 495px;
+	margin-right: 500px;
 	margin-top: -22px;
 	color: white;
 	font-weight: bold;
@@ -262,4 +268,14 @@ img.irregularWrap {
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+.mushroom {
+	position: fixed;
+	position:  absolute;
+	opacity: 0.1;
+	margin-left: 25%;
+	margin-bottom: 100px;
+	width: 800px;
+	height: 800px;
 }
