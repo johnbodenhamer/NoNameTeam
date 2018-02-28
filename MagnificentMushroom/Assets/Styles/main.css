@@ -112,11 +112,6 @@ p {
 	margin: 7px;
 }
 
-.cInfo{
-	margin: 7px;
-	font-size: 25px;
-}
-
 li {
 	margin-left: 50px;
 	font-size: 20px;
@@ -174,6 +169,7 @@ img.irregularWrap {
 	text-align:  center;
 	font-size: 60px;
 	font-weight: bold;
+	text-shadow: 4px 3px 8px black;
 }
 
 /*fixed muneBar*/
@@ -209,8 +205,8 @@ img.irregularWrap {
 }
 /*location link picture*/
 .location {
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 }
 
 .sliderContainer{
@@ -225,9 +221,10 @@ img.irregularWrap {
 }
 .sliderPic{
 	vertical-align: middle;
-	margin-left: 33%;
-	width: 500px;
-	height: 300px;
+	margin-top: 50px;
+	margin-left: 30%;
+	width: 600px;
+	height: 370px;
 }
 /*sliderImage Arrows*/
 .prev, .next{
@@ -236,8 +233,8 @@ img.irregularWrap {
 	top: 50%;
 	width: auto;
 	padding: 16px;
-	margin-left: 495px;
-	margin-right: 500px;
+	margin-left: 450px;
+	margin-right: 450px;
 	margin-top: -22px;
 	color: white;
 	font-weight: bold;
@@ -269,13 +266,31 @@ img.irregularWrap {
 .active, .dot:hover {
   background-color: #717171;
 }
-
+/*Mushroom pic css*/
 .mushroom {
-	position: fixed;
 	position:  absolute;
 	opacity: 0.1;
 	margin-left: 25%;
-	margin-bottom: 100px;
+	margin-bottom: 10px;
+	margin-top: 100px;
 	width: 800px;
 	height: 800px;
+}
+
+.cInfo {
+	margin: 7px;
+	font-size: 25px;
+}
+
+a.webLocation:hover {
+	font-size: 30px;
+}
+
+/*Picutre V for Vegan palces top left*/
+.goVegan{
+	position: absolute;
+	margin-left: 20px;
+	width: 250px;
+	height: 250px;
+	opacity: 0.7;
 }

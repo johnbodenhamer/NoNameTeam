@@ -8,25 +8,37 @@ table {
 
 h1{
   text-align: center;
-  font-size: 70px;
+  font-size: 75px;
+  text-shadow: 4px 3px 8px black;
 }
 
 td {
   border: 1px;
   text-align: left;
   padding: 8px;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 th{
-  font-size: 28px;
-  text-align: left;
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+h2{
+  font-size: 50px;
 }
 
 .btmInfo  {
   margin-left: 100px;
 }
 
-.type {
+.type, .price {
   text-align: center;
+}
+
+.xAddOns{
+  font-size: 20px;
+  font-weight: bold;
 }
