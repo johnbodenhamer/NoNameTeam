@@ -6,6 +6,14 @@ table {
   width: 100%
 }
 
+#searchbtn, button{
+  width: 170px;
+  height: 80px;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 110px;
+  margin-top: 50px;
+}
 h1{
   text-align: center;
   font-size: 75px;
@@ -16,11 +24,17 @@ td {
   border: 1px;
   text-align: left;
   padding: 8px;
-  font-size: 23px;
+  font-size: 20px;
+}
+
+h3{
+  text-align: center;
+  font-size: 25px;
+  margin-top: 100px;
 }
 
 th{
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-style: italic;
   font-weight: bolder;
@@ -30,15 +44,24 @@ h2{
   font-size: 50px;
 }
 
+select{
+  text-align: center;
+  margin-left: 60px;
+}
 .btmInfo  {
   margin-left: 100px;
 }
 
-.type, .price {
+.type, .price{
   text-align: center;
 }
 
 .xAddOns{
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+}
+
+.desc{
+  padding-left: 80px;
 }
