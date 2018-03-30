@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-<link href="Assets\Styles\main.css" rel="stylesheet" type="text/css" />
 <link href="Assets\Styles\menu.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="Assets\JavaScripts\functions.js"></script>
 <script type="text/javascript" src="Assets\JavaScripts\menu.js"></script>
@@ -14,291 +13,130 @@
   <body>
   <form action="" id="menuPage" name="menuPage">
     <h1>MAGNIFICENT<br>MENU</h1>
+
+    <div class="sliderContainer">
+        <div class="slides">
+          <img src="Assets\Images\pic1.jpg" style="width:100%"/>
+        </div>
+
+        <div class="slides">
+           <img src="Assets\Images\pic2.jpg" style="width:100%"/>
+         </div>
+
+         <div class="slides">
+           <img src="Assets\Images\pic3.jpg" style="width:100%"/>
+         </div>
+
+         <div class="slides">
+           <img src="Assets\Images\pic4.jpg" style="width:100%"/>
+         </div>
+
+         <div class="slides">
+           <img src="Assets\Images\pic5.jpg" style="width:100%"/>
+         </div>
+
+         <div class="slides">
+           <img src="Assets\Images\pic6.jpg" style="width:100%"/>
+         </div>
+     </div>
+     <br>
+
+     <div style="text-align: center">
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+     </div>
+
+     <script>//not
+     var index = 0;
+     moveSlides();
+     //code for imageSlider
+     function moveSlides(){
+       var i;
+       var slides = document.getElementsByClassName("slides");
+       var dots = document.getElementsByClassName("dot");
+       for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+       }
+       index++;
+       if (index > slides.length) {index = 1}
+       for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[index-1].style.display = "block";
+       dots[index-1].className += " active";
+       setTimeout(moveSlides, 1000); //2-second intervals
+     }//end of moveSlides()
+     </script>
+
+
     <h3>Gluton Less: <i>GL</i><br>Soy Free: <i>SF</i><br>Nut Free: <i>NF</i></h3>
-<div class="m">
     <div class="menuBar">
-      <a href="index.html">Home</a>
-      <a href="Menu.html">Menu</a>
-      <a href="reservations.html">Reservations</a>
-      <a href="OrderOnline.html">Order Online</a>
-      <a href="Contactus.html">Contact Us</a>
-      <a href="viewCart.html">View Cart</a>
+        <a href="index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="OrderOnline.html">Order Online</a>
+        <a href="Contactus.html">Contact Us</a>
+        <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
+        <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
+        <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
+     </div>
+</div>
 
-  </div>
-<div>
-  <colgroup>
-    <col class="filter" id="namecol">
-    <col class="filter" id="desccol">
-    <col class="filter" id="pricecol">
-    <col class="filter" id="typecol">
-   </colgroup>
- </div>
+  <div>
+    <colgroup>
+      <col class="filter" id="namecol">
+      <col class="filter" id="desccol">
+      <col class="filter" id="pricecol">
+      <col class="filter" id="typecol">
+     </colgroup>
+   </div>
 
-    <div class="searchGroup" id="searchGroup">
-      <button type="button" id="searchbtn" onclick="showStarters()">STARTERS</button>
-      <button type="button" id="searchbtn" onclick="showWS()">WRAPS & SANDWHICHES</button>
-      <button type="button" id="searchbtn" onclick="showEntrees()">ENTREES</button>
-      <button type="button" id="searchbtn" onclick="showKids()">KIDS MENU</button>
-      <button type="button" id="searchbtn" onclick="showAll()">FULL MENU</button>
-    </div>
-    <div id="starters">
-    <table>
-      <h2>Starters</h2>
-      <thread>
-        <th>NAME</th>
-        <th>DESCRIPTION</th>
-        <th>PRICES</th>
-        <th>QUANTITY</th>
-        <th>ADD TO CART</th>
-      </thread>
-        <tr>
-          <td class="type" id="type" name="type">Buffalo Cauliflower Bites<br><i>GL - SF</i></td>
-          <td class="desc">with ranch dipping sauce</td>
-          <td class="price" id="price" name="price">$ 5.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><input type="button" value="Add To Cart" id="addItem" /></td>
-        </tr>
-
-        <tr>
-          <td class="type" id="type" name="type">Kale Salad</td>
-          <td class="desc">with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett</td>
-          <td class="price" id="price" name="price">$6.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-
-        </tr>
-          <td class="type" id="type" name="type">Tater Tots<br><i>GL</i></td>
-          <td class="desc"> with cajun seasoning and spicy chipotle dipping sauce</td>
-          <td class="price" id="price" name="price">$3.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button" id="td2">Add To Cart</button></td>
-        </tr>
-
-        <tr>
-          <td class="type" id="type" name="type">Mac N Cheese<br><i>GL</i></td>
-          <td class="desc">organic gluten-less noodles smothered in house-made butternut squash cheese sauce topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge</td>
-          <td class="price" id="price" name="price">$4.49</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Lulu’s Chili<br><i>GL-NF</i></td>
-            <td class="desc">smoky chipotle chili with quinoa, sweet potatoes, onion, red kidney beans, black beans and tomatoes topped with housemade, butternut squash cheese, sour cream, green onion and cilantro</td>
-            <td class="price" id="price" name="price">$5.95</td>
-            <td><select id="quantity" name="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-            </td>
-            <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Loaded Nachos tortilla Chips<br><i>GL</i></td>
-          <td class="desc">topped with jackfruit carnitas and smothered with house-made butternut squash cheese sauce, salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-            <td class="type" id="type" name="type">Volcano Tots<br><i>GL</i></td>
-            <td class="desc">tater tots smothered in lulu’s chili, housemade butternut squash cheese sauce, sour cream and garnished with green onion and cilantro</td>
-            <td class="price" id="price" name="price">small-$5.95<br>large-$8.95</td>
-            <td><select id="quantity" name="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-            </td>
-            <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Loaded Nacho Tots<br><i>GL</i></td>
-          <td class="desc">tater tots topped with jackfruit carnitas and smothered with house-made butternut squash cheese sauce, salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro</td>
-          <td class="price" id="price" name="price">small-$6.95<br>large-$9.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Kale & Brussels Sprouts Caesar Salad<br><i>GL</i></td>
-          <td class="desc">shredded kale and brussels sprouts with a creamy, house-made caesar dressing, chickpea croutons, capers, lemon and walnut parmesan</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="wrapsSandwhiches">
+      <div class="searchGroup" id="searchGroup">
+        <button type="button" id="searchbtn" onclick="showStarters()">STARTERS</button>
+        <button type="button" id="searchbtn" onclick="showWS()">WRAPS & SANDWHICHES</button>
+        <button type="button" id="searchbtn" onclick="showEntrees()">ENTREES</button>
+        <button type="button" id="searchbtn" onclick="showKids()">KIDS MENU</button>
+        <button type="button" id="searchbtn" onclick="showAll()">FULL MENU</button>
+      </div>
+      <div id="starters">
       <table>
-        <h2>WRAPS & SANDWHICHES</h2><br>
-        <p class="xAddOns">Add Billy Goat chips for $1 more. Add tater tots for $2 more or Kale salad for $3 more.</p><br>
-        <br>
+        <h2>Starters</h2>
         <thread>
           <th>NAME</th>
           <th>DESCRIPTION</th>
           <th>PRICES</th>
-          <th>ADD TO CART</th>
           <th>QUANTITY</th>
+          <th>ADD TO CART</th>
         </thread>
-        <tr>
-          <td class="type" id="type" name="type">Sweet Potato Falafel</td>
-          <td class="desc">our version of the mediterranean sandwich. house-made crispy sweet potato fritters, cucumber, red onion, fresh greens and tzaziki sauce in a warm pita</td>
-          <td class="price" id="price" name="price">$6.95  </td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Buffalo Caesar Wrap</td>
-          <td class="desc">house-made crispy buffalo cauliflower bites on a whole wheat tortilla with shredded kale and brussels sprouts with a creamy, house-made caesar dressing and chickpea croutons</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Buffalo Cauliflower Wrap</td>
-           <td class="desc">house-made crispy cauliflower bites on a whole wheat tortilla with greens, shredded carrot, red onion, cucumber, smothered in spicy buffalo sauce and creamy ranch</td>
-           <td class="price" id="price" name="price">$7.95</td>
-           <td><select id="quantity" name="quantity">
-                 <option value="1">1</option>
-                 <option value="2">2</option>
-                 <option value="3">3</option>
-                 <option value="4">4</option>
-                 <option value="5">5</option>
-                 <option value="6">6</option>
-                 <option value="7">7</option>
-                 <option value="8">8</option>
-                 <option value="9">9</option>
-                 <option value="10">10</option>
-               </select>
-           </td>
-           <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-            <td class="type" id="type" name="type">Sweet Potato Black Bean Burger</td>
-            <td class="desc">house-made sweet potato black bean burger on a pretzel bun with fresh greens, red onion and chipotle sauce</td>
+          <tr>
+            <td class="type" id="type" name="type">Buffalo Cauliflower Bites<br><i>GL - SF</i></td>
+            <td class="desc">with ranch dipping sauce
+  		  <br><img src="Assets\Images\cauliflowerbites.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$ 5.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><input type="button" value="Add To Cart" id="addItem" /></td>
+          </tr>
+
+          <tr>
+            <td class="type" id="type" name="type">Kale Salad</td>
+            <td class="desc">with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett
+  		  <br><img src="Assets\Images\kalesalad.png" alt="pic1" height="160" width="160" /></td>
             <td class="price" id="price" name="price">$6.95</td>
             <td><select id="quantity" name="quantity">
                   <option value="1">1</option>
@@ -314,11 +152,34 @@
                 </select>
             </td>
             <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-            <td class="type" id="type" name="type">Buffalo Blue Burger</td>
-            <td class="desc">house-made sweet potato black bean burger on a pretzel bun with fresh greens, red  onion, spicy buffalo sauce and creamy ranch</td>
-            <td class="price" id="price" name="price">$6.95</td>
+
+          </tr>
+            <td class="type" id="type" name="type">Tater Tots<br><i>GL</i></td>
+            <td class="desc"> with cajun seasoning and spicy chipotle dipping sauce
+  		  <br><img src="Assets\Images\tatertotschipolte.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$3.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button" id="td2">Add To Cart</button></td>
+          </tr>
+
+          <tr>
+            <td class="type" id="type" name="type">Mac N Cheese<br><i>GL</i></td>
+            <td class="desc">organic gluten-less noodles smothered in house-made butternut squash cheese sauce
+  		  topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge
+  		  <br><img src="Assets\Images\macncheese.jpg" alt="pic1" height= "160" width= "160" /></td>
+            <td class="price" id="price" name="price">$4.49</td>
             <td><select id="quantity" name="quantity">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -333,295 +194,540 @@
                 </select>
             </td>
             <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">The Robo Special</td>
-          <td class="desc">house-made sweet potato black bean burger wrapped up in a whole wheat tortilla with fresh greens, lulu’s chili and house made butternut squash cheese sauce</td>
-          <td class="price" id="price" name="price">$7.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Sliders</td>
-          <td class="desc">three house-made sweet potato black bean sliders on mini pretzel buns. choose two of our signature sauces: spicy chipotle, ranch, buffalo and butternut squash cheese sauce</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Loaded Nacho Crunch Wrap</td>
-          <td class="desc">jackfruit carnitas, crushed tortilla chips, house-made butternut squash cheese sauce, wrapped in a whole wheat tortilla and grilled to golden brown. served with pickled jalapeño, salsa and sour cream</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Winter Quinoa Wrap</td>
-          <td class="desc">warm quinoa, roasted winter vegetables, shredded carrots, kale, walnut parmesan and cranberries with house-made kale pesto sauce wrapped in a whole wheat tortilla</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Carnitas Tacos<br><i>GL</i></td>
-          <td class="desc">marinated and grilled jackfruit carnitas, diced onion, cilantro, pickled jalapeño, salsa and house-made butternut squash cheese sauce on soft white corn tortillas</td>
-          <td class="price" id="price" name="price">$7.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-      </table>
-    </div>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Lulu’s Chili<br><i>GL-NF</i></td>
+              <td class="desc">smoky chipotle chili with quinoa, sweet potatoes, onion, red kidney beans,
+  			black beans and tomatoes topped with housemade, butternut squash cheese, sour cream, green onion
+  			and cilantro
+  			<br><img src="Assets\Images\smokeychili.jpg" alt="pic1" height="160" width="160" /></td>
+              <td class="price" id="price" name="price">$5.95</td>
+              <td><select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+              </td>
+              <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Loaded Nachos tortilla Chips<br><i>GL</i></td>
+            <td class="desc">topped with jackfruit carnitas and smothered with house-made butternut squash cheese sauce,
+  		  salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
+  		  <br><img src="Assets\Images\loadednachos.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+              <td class="type" id="type" name="type">Volcano Tots<br><i>GL</i></td>
+              <td class="desc">tater tots smothered in lulu’s chili, housemade butternut squash cheese sauce,
+  			sour cream and garnished with green onion and cilantro
+  			<br><img src="Assets\Images\chilitots.png" alt="pic1" height="160" width="160" /></td>
+              <td class="price" id="price" name="price">small-$5.95<br>large-$8.95</td>
+              <td><select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+              </td>
+              <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Loaded Nacho Tots<br><i>GL</i></td>
+            <td class="desc">tater tots topped with jackfruit carnitas and smothered with house-made butternut squash
+  		  cheese sauce, salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
+  		  <br><img src="Assets\Images\loadedtots.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">small-$6.95<br>large-$9.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Kale & Brussels Sprouts Caesar Salad<br><i>GL</i></td>
+            <td class="desc">shredded kale and brussels sprouts with a creamy, house-made caesar dressing,
+  		  chickpea croutons, capers, lemon and walnut parmesan
+  		  <br><img src="Assets\Images\kalebrusslesalad.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+        </table>
+      </div>
 
-    <div id="entrees">
-      <table id="entrees">
-      <h2>ENTREES</h2>
-        <thread>
-          <th>NAME</th>
-          <th>DESCRIPTION</th>
-          <th>PRICES</th>
-          <th>QUANTITY</th>
-          <th>ADD TO CART</th>
-        </thread>
-        <tr>
-          <td class="type" id="type" name="type">Butternut Squash Enchiladas</td>
-          <td class="desc">butternut squash, black bean and kale enchiladas smothered in house-made butternut squash cheese sauce, salsa and sour cream with roasted pepitas, green onion and cilantro</td>
-          <td class="price" id="price" name="price">$8.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Winter Flatbread</td>
-          <td class="desc">kale pumpkin seed pesto sauce, roasted winter vegetables drizzled with balsamic reduction and topped walnut parmesan</td>
-          <td class="price" id="price" name="price">$7.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Winter Quinoa Bowl<br><i>GL</i></td>
-          <td class="desc">warm quinoa, roasted winter vegetables, kale, shredded carrot, walnut parmesan, cranberries and house-made kale  pesto sauce</td>
-          <td class="price" id="price" name="price">$9.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">Mushroom Stroganoff<br><i>GL</i></td>
-          <td class="desc">organic, gluten-less pasta tossed with roasted mushrooms, shallots and fresh herbs in a rich, creamy sauce topped with walnut parmesan</td>
-          <td class="price" id="price" name="price">$9.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-      </table>
-    </div>
+      <div id="wrapsSandwhiches">
+        <table>
+          <h2>WRAPS & SANDWHICHES</h2><br>
+          <p class="xAddOns">Add Billy Goat chips for $1 more. Add tater tots for $2 more or Kale salad for $3 more.</p><br>
+          <br>
+          <thread>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+            <th>PRICES</th>
+            <th>ADD TO CART</th>
+            <th>QUANTITY</th>
+          </thread>
+          <tr>
+            <td class="type" id="type" name="type">Sweet Potato Falafel</td>
+            <td class="desc">our version of the mediterranean sandwich. house-made crispy sweet potato fritters, cucumber,
+  		  red onion, fresh greens and tzaziki sauce in a warm pita
+  		  <br><img src="Assets\Images\sweetpotatofalafel.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$6.95  </td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Buffalo Caesar Wrap</td>
+            <td class="desc">house-made crispy buffalo cauliflower bites on a whole wheat tortilla with shredded kale and
+  		  brussels sprouts with a creamy, house-made caesar dressing and chickpea croutons
+  		  <br><img src="Assets\Images\buffalowrap.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Buffalo Cauliflower Wrap</td>
+             <td class="desc">house-made crispy cauliflower bites on a whole wheat tortilla with greens, shredded carrot,
+  		   red onion, cucumber, smothered in spicy buffalo sauce and creamy ranch
+  		   <br><img src="Assets\Images\buffalowrapcarrot.jpg" alt="pic1" height="160" width="160" /></td>
+             <td class="price" id="price" name="price">$7.95</td>
+             <td><select id="quantity" name="quantity">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
+                   <option value="7">7</option>
+                   <option value="8">8</option>
+                   <option value="9">9</option>
+                   <option value="10">10</option>
+                 </select>
+             </td>
+             <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+              <td class="type" id="type" name="type">Sweet Potato Black Bean Burger</td>
+              <td class="desc">house-made sweet potato black bean burger on a pretzel bun with fresh greens,
+  			red onion and chipotle sauce
+  			<br><img src="Assets\Images\burger.png" alt="pic1" height="160" width="160" /></td>
+              <td class="price" id="price" name="price">$6.95</td>
+              <td><select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+              </td>
+              <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+              <td class="type" id="type" name="type">Buffalo Blue Burger</td>
+              <td class="desc">house-made sweet potato black bean burger on a pretzel bun with fresh greens, red  onion,
+  			spicy buffalo sauce and creamy ranch
+  			<br><img src="Assets\Images\buffaloburger.png" alt="pic1" height="160" width="160" /></td>
+              <td class="price" id="price" name="price">$6.95</td>
+              <td><select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+              </td>
+              <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">The Robo Special</td>
+            <td class="desc">house-made sweet potato black bean burger wrapped up in a whole wheat tortilla with fresh
+  		  greens, lulu’s chili and house made butternut squash cheese sauce
+  		  <br><img src="Assets\Images\robo.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$7.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Sliders</td>
+            <td class="desc">three house-made sweet potato black bean sliders on mini pretzel buns.
+  		  choose two of our signature sauces: spicy chipotle, ranch, buffalo and butternut squash cheese sauce
+  		  <br><img src="Assets\Images\sliders.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Loaded Nacho Crunch Wrap</td>
+            <td class="desc">jackfruit carnitas, crushed tortilla chips, house-made butternut squash cheese sauce,
+  		  wrapped in a whole wheat tortilla and grilled to golden brown. served with pickled jalapeño,
+  		  salsa and sour cream
+  		  <br><img src="Assets\Images\crunchwarp.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Winter Quinoa Wrap</td>
+            <td class="desc">warm quinoa, roasted winter vegetables, shredded carrots, kale, walnut parmesan and
+  		  cranberries with house-made kale pesto sauce wrapped in a whole wheat tortilla
+  		  <br><img src="Assets\Images\quinoawrap.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Carnitas Tacos<br><i>GL</i></td>
+            <td class="desc">marinated and grilled jackfruit carnitas, diced onion, cilantro, pickled jalapeño,
+  		  salsa and house-made butternut squash cheese sauce on soft white corn tortillas
+  		  <br><img src="Assets\Images\jackfruittaco.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$7.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+        </table>
+      </div>
 
-    <div id="kidsMenu">
-      <table>
-        <h2>KIDS MENU</h2>
-        <thread>
-          <th>NAME</th>
-          <th>PRICES</th>
-          <th>QUANTITY</th>
-          <th>ADD TO CART</th>
-        </thread>
-        <tr>
-          <td class="type" id="type" name="type">CAULIFLOWER NUGGETS<br><i>SF</i></td>
-          <td class="price">$4.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">KIDS NACHOS<br><i>GL</i></td>
-          <td class="price">$4.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">MINI BURGER (1)</td>
-          <td class="price">$3.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">CHEESY TOTS<br><i>GL</i></td>
-          <td class="price">$4.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-        <tr>
-          <td class="type" id="type" name="type">KIDS QUESADILA</td>
-          <td class="price">$4.95</td>
-          <td><select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-          </td>
-          <td><button type="button">Add To Cart</button></td>
-        </tr>
-    </table>
-  </div>
+      <div id="entrees">
+        <table id="entrees">
+        <h2>ENTREES</h2>
+          <thread>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+            <th>PRICES</th>
+            <th>QUANTITY</th>
+            <th>ADD TO CART</th>
+          </thread>
+          <tr>
+            <td class="type" id="type" name="type">Butternut Squash Enchiladas</td>
+            <td class="desc">butternut squash, black bean and kale enchiladas smothered in house-made butternut squash
+  		  cheese sauce, salsa and sour cream with roasted pepitas, green onion and cilantro
+  		  <br><img src="Assets\Images\enchill.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$8.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Winter Flatbread</td>
+            <td class="desc">kale pumpkin seed pesto sauce, roasted winter vegetables drizzled with balsamic reduction
+  		  and topped walnut parmesan
+  		  <br><img src="Assets\Images\winterflatbread.png" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$7.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Winter Quinoa Bowl<br><i>GL</i></td>
+            <td class="desc">warm quinoa, roasted winter vegetables, kale, shredded carrot, walnut parmesan,
+  		  cranberries and house-made kale  pesto sauce
+  		  <br><img src="Assets\Images\winterbowl.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="price" id="price" name="price">$9.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">Mushroom Stroganoff<br><i>GL</i></td>
+            <td class="desc">organic, gluten-less pasta tossed with roasted mushrooms, shallots and fresh herbs in a rich,
+  		  creamy sauce topped with walnut parmesan
+  		  <br><img src="Assets\Images\mushroomstroganoff.png" alt="pic1" height="160" width="160"</td>
+            <td class="price" id="price" name="price">$9.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="kidsMenu">
+        <table>
+          <h2>KIDS MENU</h2>
+          <thread>
+            <th>NAME</th>
+            <th>PRICES</th>
+            <th>QUANTITY</th>
+            <th>ADD TO CART</th>
+          </thread>
+          <tr>
+            <td class="type" id="type" name="type">CAULIFLOWER NUGGETS<br><i>SF</i></td>
+            <td class="price">$4.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">KIDS NACHOS<br><i>GL</i></td>
+            <td class="price">$4.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">MINI BURGER (1)</td>
+            <td class="price">$3.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">CHEESY TOTS<br><i>GL</i></td>
+            <td class="price">$4.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+          <tr>
+            <td class="type" id="type" name="type">KIDS QUESADILA</td>
+            <td class="price">$4.95</td>
+            <td><select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </td>
+            <td><button type="button">Add To Cart</button></td>
+          </tr>
+        </table>
+     </div>
 
     <br>
     <h2 style="font-size:25px">SUSTAINABILITY</h2>

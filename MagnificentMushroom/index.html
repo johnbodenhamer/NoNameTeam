@@ -14,106 +14,40 @@
 
    </head>
    <img src="Assets\Images\goVegan.jpg" alt="goVegan" class="goVegan">
-   <h1 class="mm"> MAGNIFICENT  MUSHROOM</h1>
-   <br>
+
+   <p class="mm">WELCOME<br><br>MAGNIFICENT  MUSHROOM</p>
      <body>
-         <div class="sliderContainer">
-             <div class="slides">
-               <img src="Assets\Images\pic1.jpg" alt="pic1" class="sliderPic" />
-             </div>
-
-             <div class="slides">
-                <img src="Assets\Images\pic2.jpg" alt="pic2" class="sliderPic" />
-              </div>
-
-              <div class="slides">
-                <img src="Assets\Images\pic3.jpg" alt="pic3" class="sliderPic" />
-              </div>
-
-              <div class="slides">
-                <img src="Assets\Images\pic4.jpg" alt="pic4" class="sliderPic" />
-              </div>
-
-              <div class="slides">
-                <img src="Assets\Images\pic5.jpg" alt="pic5" class="sliderPic" />
-              </div>
-
-              <div class="slides">
-                <img src="Assets\Images\pic6.jpg" alt="pic6" class="sliderPic" />
-              </div>
-
-           <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-           <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-          <br>
-          <div style="text-align: center">
-            <span class="dot" onclick="moveSlide(1)"></span>
-            <span class="dot" onclick="moveSlide(2)"></span>
-            <span class="dot" onclick="moveSlide(3)"></span>
-            <span class="dot" onclick="moveSlide(4)"></span>
-            <span class="dot" onclick="moveSlide(5)"></span>
-            <span class="dot" onclick="moveSlide(6)"></span>
-          </div>
-          <script>
-          //code for imageSlider
-          var slideIndex = 1;
-          showSlides(slideIndex);
-
-          function plusSlides(n){
-          showSlides(slideIndex += n);
-          }
-
-          function moveSlides(n){
-            showSlides(slideIndex = n)
-          }
-
-          function showSlides(n){
-            var i;
-            var slides = document.getElementsByClassName("slides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if(n < 1) {slideIndex = slides.length}
-            for( i = 0; i < slides.length; i++){
-              slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++){
-              dots[i].className = dots[i].className.replace("active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-
-          }
-          </script>
-
      	   <div class="menuBar">
      		     <a href="index.html">Home</a>
      			   <a href="Menu.html">Menu</a>
      	       <a href="reservations.html">Reservations</a>
      			   <a href="OrderOnline.html">Order Online</a>
      			   <a href="Contactus.html">Contact Us</a>
+             <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
+     			   <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
+             <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
           </div>
+          <!--
           <header>
            <img src="Assets\Images\mm.png" alt="Failed Image" class="mushroom" />
           </header>
-
+         -->
 		  <section id="main">
-
-		  <h1 style="font-size: 60px;">Magnificent Mushroom <h1>
 
 		  <img src="Assets\Images\food.jpg" alt="fun" class="irregularWrap" />
 
       <p class="cInfo">
-        <b>Address:</b> <a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" class="webLocation" style="color: yellow;">
+        <b>Address:</b> <a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" class="webLocation">
           3201 S Grand Ave St. Louis, MO 63118</a><br>
         <b>Telephone:</b>314-300-8215<br>
         <b>Hours:</b> Monday - Saturday 11:30am-9:00pm<br>
       </p>
       <br>
-		  <p class="Cinfo">Magnificent Mushroom was established in 2001 as a small restaurant in Saint Louis. In 2016 we expanded to a much healthier menu with a much wider variety.
+		  <p class="cInfo">Magnificent Mushroom was established in 2001 as a small restaurant in Saint Louis. In 2016 we expanded to a much healthier menu with a much wider variety.
 		  Our focus now is providing the best products at the best price for your health and wallet.
 		  </p>
       <br>
-		  <h1 style="font-size: 60px;">Why choose Magnificent Mushroom ?</h1>
+		  <h1 class="titles">Why choose Magnificent Mushroom ?</h1>
       <p>
         <ul>
 		        <li>
@@ -135,9 +69,9 @@
 		   </ul>
      </p>
      <br>
-		   <h1 style="font-size: 60px;">Where to find us</h1>
+		   <h1 class="titles">Where to find us</h1>
 		   <p class="cInfo">
-			      1 Magnificant Mushroom ln &#183;<br>
+			      1 Magnificent Mushroom ln &#183;<br>
 			      Saint Louis, MO 63129 &#183;
           <a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859">
           <img src="Assets\Images\location.png" class="location" alt="location"></a> Click Me!
@@ -145,8 +79,8 @@
    </section>
       <footer>
 	     <address style="font-size: 18px">
-		    Magnificant Mushroom &#183;
-			  1 Magnificant Mushroom ln &#183;
+		    Magnificent Mushroom &#183;
+			  1 Magnificent Mushroom ln &#183;
 			  Saint Louis, MO 63129 &#183;
 		  </address>
 	</footer>
