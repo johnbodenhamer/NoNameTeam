@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="Assets/Styles/menu.css" rel="stylesheet" type="text/css" />
+    <link href="menu.html" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="Assets/JavaScripts/jsLibrary.js"></script>
+    <script type="text/javascript" src="Assets/JavaScripts/cartCookies.js"></script>
+    <title>Shopping Cart</title>
+  </head>
+  <body onload="retrieveOrder()">
+      <div class="menuBar">
+          <a href="index.html">Home</a>
+          <a href="Menu.html">Menu</a>
+          <a href="reservations.html">Reservations</a>
+          <a href="OrderOnline.html">Order Online</a>
+          <a href="Contactus.html">Contact Us</a>
+          <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
+          <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
+          <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
+          <a href="Cart.html" id="cartlbl"><span>Cart:</span><span id="itemCount">0</span/></a>
+       </div>
+
+<h2> Items in your order</h2>
+<div id="main">
+      <h2>Your Shopping Cart</h2>
+      <p id="cartStatus">Currently you have no items in your shopping cart.</p>
+   </div>
+   <div>
+		<input type=button value="Continue Shopping" onClick="self.location='menu.html'">
+		<input type=button value="Procced to Checkout" onClick="self.location='checkout.html'">
+   </div>
+  </body>
+</html>

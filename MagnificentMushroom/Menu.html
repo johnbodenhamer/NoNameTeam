@@ -2,44 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-<link href="Assets\Styles\menu.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="Assets\JavaScripts\functions.js"></script>
-<script type="text/javascript" src="Assets\JavaScripts\menu.js"></script>
-<script type="text/javascript" src="Assets\JavaScripts\jsLibrary.js"></script>
+<link href="Assets/Styles/menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Assets/JavaScripts/functions.js"></script>
+<!--<script type="text/javascript" src="Assets/JavaScripts/menuList.js"></script> either this or button grouping-->
 
     <title>Menu</title>
 
   </head>
   <body>
-  <form action="" id="menuPage" name="menuPage">
-    <h1>MAGNIFICENT<br>MENU</h1>
 
-    <div class="sliderContainer">
+  <h1>MAGNIFICENT<br>MENU</h1>
+
+  <div class="sliderContainer">
+      <div class="slides">
+        <img src="Assets\Images\pic1.jpg" style="width:100%"/>
+      </div>
+
+      <div class="slides">
+          <img src="Assets\Images\pic2.jpg" style="width:100%"/>
+       </div>
+
         <div class="slides">
-          <img src="Assets\Images\pic1.jpg" style="width:100%"/>
+         <img src="Assets\Images\pic3.jpg" style="width:100%"/>
         </div>
 
-        <div class="slides">
-           <img src="Assets\Images\pic2.jpg" style="width:100%"/>
-         </div>
+       <div class="slides">
+         <img src="Assets\Images\pic4.jpg" style="width:100%"/>
+       </div>
 
-         <div class="slides">
-           <img src="Assets\Images\pic3.jpg" style="width:100%"/>
-         </div>
+       <div class="slides">
+         <img src="Assets\Images\pic5.jpg" style="width:100%"/>
+       </div>
 
-         <div class="slides">
-           <img src="Assets\Images\pic4.jpg" style="width:100%"/>
-         </div>
-
-         <div class="slides">
-           <img src="Assets\Images\pic5.jpg" style="width:100%"/>
-         </div>
-
-         <div class="slides">
-           <img src="Assets\Images\pic6.jpg" style="width:100%"/>
-         </div>
-     </div>
-     <br>
+       <div class="slides">
+         <img src="Assets\Images\pic6.jpg" style="width:100%"/>
+        </div>
+    </div>
+    <br>
 
      <div style="text-align: center">
        <span class="dot"></span>
@@ -83,17 +82,9 @@
         <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
         <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
         <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
+        <a href="Cart.html" id="cartlbl"><span>Cart:</span><span id="itemCount">0</span/></a>
      </div>
-</div>
-
-  <div>
-    <colgroup>
-      <col class="filter" id="namecol">
-      <col class="filter" id="desccol">
-      <col class="filter" id="pricecol">
-      <col class="filter" id="typecol">
-     </colgroup>
-   </div>
+    <form action="" id="menuPage" name="menuPage" action="">
 
       <div class="searchGroup" id="searchGroup">
         <button type="button" id="searchbtn" onclick="showStarters()">STARTERS</button>
@@ -102,35 +93,31 @@
         <button type="button" id="searchbtn" onclick="showKids()">KIDS MENU</button>
         <button type="button" id="searchbtn" onclick="showAll()">FULL MENU</button>
       </div>
+
       <div id="starters">
-      <table>
-        <h2>Starters</h2>
+      <table id="tbl1">
+        <colgroup>
+          <col class="nofilter" id="namecol">
+          <col class="nofilter" id="desccol">
+          <col class="filter" id="pricecol">
+          <col class="nofilter" id="typecol">
+          <col class="nofilter" id="addcol">
+         </colgroup>
+         <caption>
+           <h2>Starters</h2>
+         </caption>
         <thread>
           <th>NAME</th>
           <th>DESCRIPTION</th>
           <th>PRICES</th>
-          <th>QUANTITY</th>
           <th>ADD TO CART</th>
         </thread>
           <tr>
-            <td class="type" id="type" name="type">Buffalo Cauliflower Bites<br><i>GL - SF</i></td>
-            <td class="desc">with ranch dipping sauce
-  		  <br><img src="Assets\Images\cauliflowerbites.jpg" alt="pic1" height="160" width="160" /></td>
+            <td class="type" id="product" name="type">Buffalo Cauliflower Bites</td>
+            <td class="desc">with ranch dipping sauce<br><i>GL - SF</i><br>
+              <img src="Assets\Images\cauliflowerbites.jpg" alt="pic1" height="160" width="160" /></td>
             <td class="price" id="price" name="price">$ 5.95</td>
-            <td><select id="quantity" name="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-            </td>
-            <td><input type="button" value="Add To Cart" id="addItem" /></td>
+            <td><input type="button" value="Add to Cart" onclick="self.location='cookieBuffaloCauliflower.html'" /></td>
           </tr>
 
           <tr>
@@ -151,7 +138,7 @@
                   <option value="10">10</option>
                 </select>
             </td>
-            <td><button type="button">Add To Cart</button></td>
+            <td><button type="button" onclick="addCart(2,0)">Add To Cart</button></td>
 
           </tr>
             <td class="type" id="type" name="type">Tater Tots<br><i>GL</i></td>
@@ -305,7 +292,7 @@
       </div>
 
       <div id="wrapsSandwhiches">
-        <table>
+        <table id="tbl2">
           <h2>WRAPS & SANDWHICHES</h2><br>
           <p class="xAddOns">Add Billy Goat chips for $1 more. Add tater tots for $2 more or Kale salad for $3 more.</p><br>
           <br>

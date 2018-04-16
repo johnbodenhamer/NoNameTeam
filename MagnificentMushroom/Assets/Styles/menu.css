@@ -3,17 +3,23 @@ body {
 	background-image: url("../../Assets/Images/veg.jpg");
 	background-size: 100%;
 	background-attachment: fixed;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 
 /*START of navBar*/
-.menuBar	{
+.menuBar{
 		background-color: #333333;
 		opacity: 0.8;
 		overflow: left;
 		position: fixed;
 		top: 0;
 		width: 100%;
+}
+
+.menuBar, #cartlbl{
+	float: right;
+	margin-right: 300px;
 }
 
 .menuBar a	{
@@ -100,7 +106,7 @@ select{
 .sliderContainer{
 	max-width: 1000px;
 	position: relative;
-	margin-left: 450px;
+	margin-left: 950px;
 }
 
 .sliderContainer img{
@@ -171,4 +177,5 @@ select{
 }
 
 .desc{
-  padding-left: 80px;
+  padding-left: 100px;
+}
