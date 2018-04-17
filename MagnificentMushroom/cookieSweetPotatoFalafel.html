@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sweet Potato Falafel</title>
+    <link rel="stylesheet" type="text/css" href="Assets/Styles/menu.css" />
+
+    <script type="text/javascript" src="Assets/JavaScripts/jsLibrary.js"></script>
+    <script type="text/javascript" src="Assets/JavaScripts/menu.js"></script>
+
+  </head>
+  <body>
+    <form name="orderform" id="orderform" action="">
+    <div class="menuBar">
+        <a href="index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="OrderOnline.html">Order Online</a>
+        <a href="Contactus.html">Contact Us</a>
+        <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
+        <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
+        <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
+        <a href="Cart.html" id="cartlbl"><span>Cart:</span><span id="itemCount">0</span/></a>
+     </div>
+
+    <table id="ordertable">
+       <caption>
+         <h2>Starters</h2>
+       </caption>
+      <thread>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>PRICES</th>
+        <th>QUANTITY</th>
+        <th>ADD TO CART</th>
+      </thread>
+        <tr>
+          <td>
+            <input id="product" name="product" type="text" readonly="readonly" value="Sweet Potato Falafel" />
+          </td>
+          <td class="desc">
+              our version of the mediterranean sandwich. house-made crispy sweet potato fritters, cucumber,
+  		        red onion, fresh greens and tzaziki sauce in a warm pita.
+      </td>
+          <td>
+            <input id="price" name="price" type="text" value="$6.95" readonly="readonly" />
+          </td>
+          <td>
+            <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+          </td>
+          <td>
+            <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
+          </td>
+        </tr>
+      </table>
+      <img src="Assets\Images\sweetpotatofalafel.png" alt="pic1" height="160" width="160" />
+    </from>
+  </body>
+</html>

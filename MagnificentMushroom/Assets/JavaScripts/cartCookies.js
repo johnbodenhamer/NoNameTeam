@@ -56,19 +56,6 @@ function retrieveOrder() {
 				productCell.innerHTML = getField(itemsInCart[i], "product");
 				newRow.appendChild(productCell);
 
-				/*
-				var productDescription = "";
-				if(getField(itemsInCart[i], "gender") != null)
-					productDescription += getField(itemsInCart[i], "gender") + " ";
-				if(getField(itemsInCart[i], "size") != null)
-					productDescription += getField(itemsInCart[i], "size") + " ";
-				if(getField(itemsInCart[i], "color") != null)
-					productDescription += getField(itemsInCart[i], "color") + " ";
-				var descriptionCell = document.createElement("td");
-				descriptionCell.innerHTML = productDescription;
-				newRow.appendChild(descriptionCell);
-				*/
-
 				var quantityCell = document.createElement("td");
 				quantityCell.style.textAlign = "right";
 				quantityCell.innerHTML = getField(itemsInCart[i], "quantity");
