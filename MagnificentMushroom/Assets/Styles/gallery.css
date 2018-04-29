@@ -1,0 +1,93 @@
+body {
+	padding-top: 100px;
+	background-image: url("../../Assets/Images/woodVeg.jpg");
+	background-size: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+
+h1{
+	text-align:  center;
+	font-size: 80px;
+	font-weight: bold;
+	text-shadow: 5px 2px 3px #333333;
+	margin-top: 50px;
+	margin-bottom: 150px;
+  margin-right: 450px;
+  color: lightgreen;
+}
+
+#galleryPics{
+  height: 400px;
+  weight: 350px;
+}
+
+#galleryTbl{
+  margin-left: 100px;
+  border-spacing: 35px;
+  text-shadow: 5px 2px 3px #333333;
+}
+
+.footHeader{
+  font-size: 30px;
+  color: lightgreen;
+	text-shadow: 5px 2px 3px #333333;
+}
+
+.galleryInfo {
+	margin: 7px;
+	font-size: 20px;
+  color: lightgreen;
+}
+
+/*location link picture*/
+.location {
+	width: 40px;
+	height: 40px;
+}
+
+.location:hover {
+	width: 45px;
+	height: 45px;
+}
+
+/*START of navBar*/
+.menuBar, #cartlbl{
+	float: right;
+	margin-right: 300px;
+	font-weight: bold;
+}
+
+.menuBar	{
+		background-color: #333333;
+		opacity: 0.8;
+		overflow: left;
+		position: fixed;
+		top: 0;
+		width: 100%;
+}
+
+.menuBar a	{
+	margin-left: 35px;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.menuBar a:hover {
+	color: lightgreen;
+}
+
+.menuBar img {
+	width: 39px;
+	height: 30px;
+}
+.menuBar img:hover {
+	width: 42px;
+	height: 33px;
+}
+/*END of navBar*/

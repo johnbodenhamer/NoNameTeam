@@ -13,23 +13,42 @@
       <div class="menuBar">
           <a href="index.html">Home</a>
           <a href="Menu.html">Menu</a>
-          <a href="reservations.html">Reservations</a>
-          <a href="OrderOnline.html">Order Online</a>
           <a href="Contactus.html">Contact Us</a>
           <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
           <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
           <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
-          <a href="Cart.html" id="cartlbl"><span>Cart:</span><span id="itemCount">0</span/></a>
+          <a href="Cart.html" id="cartlbl"><span>View Cart</span></a>
        </div>
 
 <h2> Items in your order</h2>
 <div id="main">
       <h2>Your Shopping Cart</h2>
       <p id="cartStatus">Currently you have no items in your shopping cart.</p>
+      <p id="cartPosition">Cart Total: $<span id="cartTotal">0.00</span></p>
+
+
+
    </div>
    <div>
 		<input type=button value="Continue Shopping" onClick="self.location='menu.html'">
-		<input type=button value="Procced to Checkout" onClick="self.location='checkout.html'">
+    <p id="payPal" style="margin-left: 50%">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="BenHampton11@yahoo.com">
+        <input type="hidden" name="lc" value="US">
+        <input type="hidden" name="item_name" value="cart">
+        <input type="hidden" name="amount" value="1.00" id="ctotal">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="cn" value="Add special instructions to the seller:">
+        <input type="hidden" name="no_shipping" value="1">
+        <input type="hidden" name="tax_rate" value="1.225">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </p>
    </div>
   </body>
 </html>

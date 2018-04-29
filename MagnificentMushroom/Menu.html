@@ -38,18 +38,22 @@
          <img src="Assets\Images\pic6.jpg" style="width:100%"/>
         </div>
     </div>
+    <span class="prev">&#8249;</span>
+    <span class="next">&#8250;</span>
     <br>
 
      <div style="text-align: center">
-       <span class="dot"></span>
-       <span class="dot"></span>
-       <span class="dot"></span>
-       <span class="dot"></span>
-       <span class="dot"></span>
-       <span class="dot"></span>
+       <span class="dot" onclick="dotClick(0)"></span>
+       <span class="dot" onclick="dotClick(1)"></span>
+       <span class="dot" onclick="dotClick(2)"></span>
+       <span class="dot" onclick="dotClick(3)"></span>
+       <span class="dot" onclick="dotClick(4)"></span>
+       <span class="dot" onclick="dotClick(5)"></span>
      </div>
 
-     <script>//not
+
+
+     <script>
      var index = 0;
      moveSlides();
      //code for imageSlider
@@ -67,7 +71,8 @@
        }
        slides[index-1].style.display = "block";
        dots[index-1].className += " active";
-       setTimeout(moveSlides, 1000); //2-second intervals
+       setTimeout(moveSlides, 2000); //2-second intervals
+
      }//end of moveSlides()
      </script>
 
@@ -76,13 +81,12 @@
     <div class="menuBar">
         <a href="index.html">Home</a>
         <a href="Menu.html">Menu</a>
-        <a href="reservations.html">Reservations</a>
-        <a href="OrderOnline.html">Order Online</a>
+        <a href="gallery.html">Gallery</a>
         <a href="Contactus.html">Contact Us</a>
         <a href="https://www.instagram.com/luluslocaleatery/"><img src="Assets\Images\ig.png" class="navLogos"/></a>
         <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
         <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
-        <a href="Cart.html" id="cartlbl"><span>Cart:</span><span id="itemCount">0</span/></a>
+        <a href="Cart.html" id="cartlbl"><span>View Cart</span></a>
      </div>
     <form action="" id="menuPage" name="menuPage" action="">
 
@@ -479,5 +483,10 @@
     </div>
   </div>
   </form>
+  <address style="font-size: 15px; text-align:center">
+   Magnificent Mushroom &#183;
+   1 Magnificent Mushroom ln &#183;
+   Saint Louis, MO 63129 &#183;
+ </address>
   </body>
 </html>

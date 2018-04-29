@@ -4,6 +4,48 @@ body {
 	background-size: 100%;
 	background-attachment: fixed;
 }
+
+/*START of navBar*/
+.menuBar, #cartlbl{
+	float: right;
+	margin-right: 300px;
+	font-weight: bold;
+}
+
+.menuBar	{
+		background-color: #333333;
+		opacity: 0.8;
+		overflow: left;
+		position: fixed;
+		top: 0;
+		width: 100%;
+}
+
+.menuBar a	{
+	margin-left: 35px;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.menuBar a:hover {
+	color: lightgreen;
+}
+
+.menuBar img {
+	width: 39px;
+	height: 30px;
+}
+.menuBar img:hover {
+	width: 42px;
+	height: 33px;
+}
+/*END of navBar*/
+
 fieldset {
 	background-color: lightblue;
 	border: 1px solid rgb(67, 76, 169);

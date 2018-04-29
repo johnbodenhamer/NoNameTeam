@@ -8,18 +8,19 @@ body {
 
 
 /*START of navBar*/
-.menuBar{
+.menuBar, #cartlbl{
+	float: right;
+	margin-right: 300px;
+	font-weight: bold;
+}
+
+.menuBar	{
 		background-color: #333333;
 		opacity: 0.8;
 		overflow: left;
 		position: fixed;
 		top: 0;
 		width: 100%;
-}
-
-.menuBar, #cartlbl{
-	float: right;
-	margin-right: 300px;
 }
 
 .menuBar a	{
@@ -98,15 +99,26 @@ h2{
 }
 
 select{
-  text-align: center;
   margin-left: 60px;
+	height: 50px;
+	width: 75px;
+	font-size: 18px;
+	text-align: center;
 }
 
+#product{
+	width: 350px;
+	text-align: center;
+}
+
+#price{
+	text-align: center;
+}
 /*START of imageSlider */
 .sliderContainer{
 	max-width: 1000px;
 	position: relative;
-	margin-left: 950px;
+	margin-left: 450px;
 }
 
 .sliderContainer img{
@@ -128,9 +140,9 @@ select{
 	top: 50%;
 	width: auto;
 	padding: 16px;
-	margin-left: 395px;
-	margin-right: 395px;
-	margin-top: -22px;
+	margin-left: 600px;
+	margin-right: 580px;
+	margin-top: 150px;
 	color: white;
 	font-weight: bold;
 	font-size: 45px;
@@ -178,4 +190,15 @@ select{
 
 .desc{
   padding-left: 100px;
+}
+
+input{
+	width: 180px;
+	height: 40px;
+	font-size: 18px;
+}
+
+#ppPic{
+	height: 70px;
+	width: 190px;
 }
