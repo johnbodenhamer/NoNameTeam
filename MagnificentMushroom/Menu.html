@@ -113,94 +113,159 @@
         <thread>
           <th>NAME</th>
           <th>DESCRIPTION</th>
-          <th>PRICES</th>
+          <th  style="text-align:left">PRICES</th>
           <th>ADD TO CART</th>
         </thread>
+        <br>
           <tr>
-            <td class="type" id="product" name="type">Buffalo Cauliflower Bites</td>
-            <td class="desc">with ranch dipping sauce<br><i>GL - SF</i><br>
-              <img src="Assets\Images\cauliflowerbites.jpg" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">$ 5.95</td>
-            <td><input type="button" value="Add to Cart" onclick="self.location='cookieBuffaloCauliflower.html'" /></td>
+            <td class="type" id="product" name="type">Buffalo Cauliflower Bites<br><br>
+              <img src="Assets\Images\cauliflowerbites.jpg" alt="pic1" height="160" width="160" />
+            </td>
+            <td class="desc">
+              with ranch dipping sauce<br><i>GL - SF</i><br>
+            </td>
+            <td class="price" id="price" name="price">
+              $ 5.95
+            </td>
+            <td>
+              <input type="button" value="Add to Cart" onclick="self.location='cookieBuffaloCauliflower.html'" />
+            </td>
           </tr>
 
           <tr>
-            <td class="type" id="type" name="type">Kale Salad</td>
-            <td class="desc">with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett
-  		  <br><img src="Assets\Images\kalesalad.png" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">$6.95</td>
-            <td><input type="button" value="Add to Cart" onclick="self.location='cookieKaleSalad.html'" /></td>
-          </tr>
-          <tr>
-            <td class="type" id="type" name="type">Tater Tots<br><i>GL</i></td>
-            <td class="desc"> with cajun seasoning and spicy chipotle dipping sauce<br>
-              <img src="Assets\Images\tatertotschipolte.jpg" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">$3.95</td>
-            <td><input type="button" value="Add to Cart" onclick="self.location='CookieTaterTots.html'" /></td>
+            <td class="type" id="type" name="type">Kale Salad<br><br>
+              <img src="Assets\Images\kalesalad.png" alt="pic1" height="160" width="160" />
+            </td>
+            <td class="desc">
+              with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett
+  		      </td>
+            <td class="price" id="price" name="price">
+              $6.95
+            </td>
+            <td>
+              <input type="button" value="Add to Cart" onclick="self.location='cookieKaleSalad.html'" />
+            </td>
           </tr>
 
           <tr>
-            <td class="type" id="type" name="type">Mac N Cheese<br><i>GL</i></td>
-            <td class="desc">organic gluten-less noodles smothered in house-made butternut squash cheese sauce
-  		  topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge
-  		  <br><img src="Assets\Images\macncheese.jpg" alt="pic1" height= "160" width= "160" /></td>
-            <td class="price" id="price" name="price">$4.49</td>
+            <td class="type" id="type" name="type">Tater Tots<br><i>GL</i><br><br>
+            <img src="Assets\Images\tatertotschipolte.jpg" alt="pic1" height="160" width="160" />
+          </td>
+            <td class="desc">
+              with cajun seasoning and spicy chipotle dipping sauce
+              </td>
+            <td class="price" id="price" name="price">
+              $3.95
+            </td>
+            <td>
+              <input type="button" value="Add to Cart" onclick="self.location='CookieTaterTots.html'" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="type" id="type" name="type">
+              Mac N Cheese<br><i>GL</i><br><br>
+              <img src="Assets\Images\macncheese.jpg" alt="pic1" height= "160" width= "160" />
+            </td>
+            <td class="desc">
+              organic gluten-less noodles smothered in house-made butternut squash cheese sauce
+  		        topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge
+  		      </td>
+            <td class="price" id="price" name="price">
+              $4.49
+            </td>
             <td>
               <input type="button" value="Add to Cart" onclick="self.location='cookieMacNCheese.html'" />
             </td>
           </tr>
 
-          <tr>
-            <td class="type" id="type" name="type">Lulu’s Chili<br><i>GL-NF</i></td>
-              <td class="desc">smoky chipotle chili with quinoa, sweet potatoes, onion, red kidney beans,
-  			black beans and tomatoes topped with housemade, butternut squash cheese, sour cream, green onion
-  			and cilantro
-  			<br><img src="Assets\Images\smokeychili.jpg" alt="pic1" height="160" width="160" /></td>
-              <td class="price" id="price" name="price">$5.95</td>
+          <tr id="luluChili">
+            <td class="type" id="type" name="type">
+              Lulu’s Chili<br><i>GL-NF</i><br><br>
+              <img src="Assets\Images\smokeychili.jpg" alt="pic1" height="160" width="160" />
+            </td>
+              <td class="desc">
+                smoky chipotle chili with quinoa, sweet potatoes, onion, red kidney beans,
+  			        black beans and tomatoes topped with housemade, butternut squash cheese, sour cream, green onion
+  			        and cilantro
+              </td>
+              <td class="price" id="price" name="price">
+                $5.95
+              </td>
               <td>
                 <input type="button" value="Add to Cart" onclick="self.location='cookieLulusChili.html'" />
               </td>
           </tr>
 
           <tr>
-            <td class="type" id="type" name="type">Loaded Nachos tortilla Chips<br><i>GL</i></td>
-            <td class="desc">topped with jackfruit carnitas and smothered with house-made butternut squash cheese sauce,
-  		  salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
-  		  <br><img src="Assets\Images\loadednachos.png" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">$8.95</td>
+            <td class="type" id="type" name="type">
+              Loaded Nachos tortilla Chips<br><i>GL</i><br><br>
+              <img src="Assets\Images\loadednachos.png" alt="pic1" height="160" width="160" />
+            </td>
+            <td class="desc">
+              topped with jackfruit carnitas and smothered with house-made butternut squash cheese sauce,
+  		        salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
+  		  </td>
+            <td class="price" id="price" name="price">
+              $8.95
+            </td>
             <td>
               <input type="button" value="Add to Cart" onclick="self.location='cookieLoadedNachosTortillaChips.html'" />
             </td>
           </tr>
 
           <tr>
-              <td class="type" id="type" name="type">Volcano Tots<br><i>GL</i></td>
-              <td class="desc">tater tots smothered in lulu’s chili, housemade butternut squash cheese sauce,
-  			sour cream and garnished with green onion and cilantro
-  			<br><img src="Assets\Images\chilitots.png" alt="pic1" height="160" width="160" /></td>
-              <td class="price" id="price" name="price">small-$5.95<br>large-$8.95</td>
+              <td class="type" id="type" name="type">
+                Volcano Tots<br><i>GL</i><br><br>
+                <img src="Assets\Images\chilitots.png" alt="pic1" height="160" width="160" />
+              </td>
+              <td class="desc">
+                tater tots smothered in lulu’s chili, housemade butternut squash cheese sauce,
+        			  sour cream and garnished with green onion and cilantro
+        			</td>
+              <td class="price" id="price" name="price">
+                <select id="portionVT">
+                  <option>Select</option>
+                  <option>small-$5.95</option>
+                  <option>large-$8.95</option>
+              </td>
               <td>
-              <input type="button" value="Add to Cart" onclick="self.location='cookieValcanoTots.html'" />
+              <input type="button" value="Add to Cart" onclick="pricePortionVT()" />
             </td>
           </tr>
 
           <tr>
-            <td class="type" id="type" name="type">Loaded Nacho Tots<br><i>GL</i></td>
-            <td class="desc">tater tots topped with jackfruit carnitas and smothered with house-made butternut squash
-  		  cheese sauce, salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
-  		  <br><img src="Assets\Images\loadedtots.jpg" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">small-$6.95<br>large-$9.95</td>
+            <td class="type" id="type" name="type">
+              Loaded Nacho Tots<br><i>GL</i><br><br>
+              <img src="Assets\Images\loadedtots.jpg" alt="pic1" height="160" width="160" />
+            </td>
+            <td class="desc">
+              tater tots topped with jackfruit carnitas and smothered with house-made butternut squash
+  		        cheese sauce, salsa, sour cream and garnished with green onion, pickled jalapeño and cilantro
+  		     </td>
+           <td class="price" id="price" name="price">
+              <select id="portionLNT">
+                <option>Select</option>
+                <option>small-$6.95</option>
+                <option>large-$9.95</option>
+            </td>
             <td>
-            <input type="button" value="Add to Cart" onclick="self.location='cookieLoadedNachoTots.html'" />
+            <input type="button" value="Add to Cart" onclick="pricePortionLNT()" />
             </td>
           </tr>
 
-          <tr>
-            <td class="type" id="type" name="type">Kale & Brussels Sprouts Caesar Salad<br><i>GL</i></td>
-            <td class="desc">shredded kale and brussels sprouts with a creamy, house-made caesar dressing,
-  		  chickpea croutons, capers, lemon and walnut parmesan
-  		  <br><img src="Assets\Images\kalebrusslesalad.jpg" alt="pic1" height="160" width="160" /></td>
-            <td class="price" id="price" name="price">$8.95</td>
+          <tr id="KaleBrusselsSproutsCaesarSalad">
+            <td class="type" id="type" name="type">
+              Kale & Brussels Sprouts Caesar Salad<br><i>GL</i><br><br>
+              <img src="Assets\Images\kalebrusslesalad.jpg" alt="pic1" height="160" width="160" />
+            </td>
+            <td class="desc">
+              shredded kale and brussels sprouts with a creamy, house-made caesar dressing,
+  		        chickpea croutons, capers, lemon and walnut parmesan
+  		      </td>
+            <td class="price" id="price" name="price">
+              $8.95
+            </td>
             <td>
             <input type="button" value="Add to Cart" onclick="self.location='cookieKale&BrusselsSproutsCaesarSalad.html'" />
             </td>
@@ -208,17 +273,16 @@
         </table>
       </div>
 
-      <div id="wrapsSandwhiches">
+      <div id="wrapsSandwiches">
         <table id="tbl2">
-          <h2>WRAPS & SANDWHICHES</h2><br>
+          <h2>WRAPS & SANDWICHES</h2><br>
           <p class="xAddOns">Add Billy Goat chips for $1 more. Add tater tots for $2 more or Kale salad for $3 more.</p><br>
           <br>
           <thread>
             <th>NAME</th>
             <th>DESCRIPTION</th>
-            <th>PRICES</th>
+            <th style="text-align:left">PRICES</th>
             <th>ADD TO CART</th>
-            <th>QUANTITY</th>
           </thread>
 
           <tr>
@@ -234,7 +298,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr id="BuffaloCaesarWrap">
             <td class="type" id="type" name="type">Buffalo Caesar Wrap</td>
             <td class="desc">house-made crispy buffalo cauliflower bites on a whole wheat tortilla with shredded kale and
   		  brussels sprouts with a creamy, house-made caesar dressing and chickpea croutons
@@ -258,10 +322,10 @@
               </td>
           </tr>
 
-          <tr>
+          <tr id="SweetPotatoBlackBeanBurger">
               <td class="type" id="type" name="type">Sweet Potato Black Bean Burger</td>
               <td class="desc">house-made sweet potato black bean burger on a pretzel bun with fresh greens,
-  			red onion and chipotle sauce
+  			                       red onion and chipotle sauce
   			<br><img src="Assets\Images\burger.png" alt="pic1" height="160" width="160" /></td>
               <td class="price" id="price" name="price">$6.95</td>
               <td>
@@ -356,8 +420,7 @@
           <thread>
             <th>NAME</th>
             <th>DESCRIPTION</th>
-            <th>PRICES</th>
-            <th>QUANTITY</th>
+            <th style="text-align:left">PRICES</th>
             <th>ADD TO CART</th>
           </thread>
           <tr>
@@ -421,8 +484,7 @@
           <h2>KIDS MENU</h2>
           <thread>
             <th>NAME</th>
-            <th>PRICES</th>
-            <th>QUANTITY</th>
+            <th style="text-align:left">PRICES</th>
             <th>ADD TO CART</th>
           </thread>
           <tr>

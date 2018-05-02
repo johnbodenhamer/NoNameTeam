@@ -23,7 +23,7 @@ h1{
 }
 
 #galleryTbl{
-  margin-left: 100px;
+  margin-left: 40px;
   border-spacing: 35px;
   text-shadow: 5px 2px 3px #333333;
 }
@@ -54,7 +54,7 @@ h1{
 /*START of navBar*/
 .menuBar, #cartlbl{
 	float: right;
-	margin-right: 300px;
+	margin-right: 100px;
 	font-weight: bold;
 }
 

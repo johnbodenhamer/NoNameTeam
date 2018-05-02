@@ -33,5 +33,5 @@ function addOrder() {
 		setField(newItem, allSelects[i].id, optionText, expiryDate);
 	}
 
-	alert(getField(newItem, "quantity") + " " + getField(newItem, "product") + " added to yout shopping cart.");
+	alert(getField(newItem, "quantity") + " " + getField(newItem, "product") + " added to your shopping cart.");
 }

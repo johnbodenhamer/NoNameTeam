@@ -1,6 +1,6 @@
 function showStarters(){
   var s = document.getElementById("starters");
-  var w = document.getElementById("wrapsSandwhiches");
+  var w = document.getElementById("wrapsSandwiches");
   var e = document.getElementById("entrees");
   var k = document.getElementById("kidsMenu");
   if(s.style.display == "none"){
@@ -18,7 +18,7 @@ function showStarters(){
 
 function showWS(){
   var s = document.getElementById("starters");
-  var w = document.getElementById("wrapsSandwhiches");
+  var w = document.getElementById("wrapsSandwiches");
   var e = document.getElementById("entrees");
   var k = document.getElementById("kidsMenu");
   if(w.style.display == "none"){
@@ -36,7 +36,7 @@ function showWS(){
 
 function showEntrees(){
   var s = document.getElementById("starters");
-  var w = document.getElementById("wrapsSandwhiches");
+  var w = document.getElementById("wrapsSandwiches");
   var e = document.getElementById("entrees");
   var k = document.getElementById("kidsMenu");
   if(e.style.display == "none"){
@@ -54,7 +54,7 @@ function showEntrees(){
 
 function showKids(){
   var s = document.getElementById("starters");
-  var w = document.getElementById("wrapsSandwhiches");
+  var w = document.getElementById("wrapsSandwiches");
   var e = document.getElementById("entrees");
   var k = document.getElementById("kidsMenu");
   if(k.style.display == "none"){
@@ -85,7 +85,7 @@ function showNutFree(){
 
 function showAll(){
   var s = document.getElementById("starters");
-  var w = document.getElementById("wrapsSandwhiches");
+  var w = document.getElementById("wrapsSandwiches");
   var e = document.getElementById("entrees");
   var k = document.getElementById("kidsMenu");
 
@@ -97,4 +97,27 @@ function showAll(){
     k.style.display = "block";
   }
 
+}
+
+//funtion to direct selected option for SMALL or LARGE value
+function pricePortionLNT(){
+  var p = document.getElementById("portionLNT").value;
+  if(p.substring(0,5) == "small"){
+    window.location.href  = "cookieLoadedNachoTotsSmall.html";
+  }else if(p.substring(0,5) == "large"){
+    window.location.href  = "cookieLoadedNachoTotsLarge.html";
+  }else {
+    alert("Please Select A Porion Size (Small/Large)");
+  }
+}
+
+function pricePortionVT(){
+  var p = document.getElementById("portionVT").value;
+  if(p.substring(0,5) == "small"){
+    window.location.href  = "cookieVolcanoTotsSmall.html";
+  }else if(p.substring(0,5) == "large"){
+    window.location.href  = "cookieVolcanoTotsLarge.html";
+  }else {
+    alert("Please Select A Porion Size (Small/Large)");
+  }
 }

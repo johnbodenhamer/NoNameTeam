@@ -10,7 +10,7 @@ body {
 /*START of navBar*/
 .menuBar, #cartlbl{
 	float: right;
-	margin-right: 300px;
+	margin-right: 100px;
 	font-weight: bold;
 }
 
@@ -112,7 +112,7 @@ select{
 }
 
 #price{
-	text-align: center;
+	text-align: left;
 }
 /*START of imageSlider */
 .sliderContainer{
@@ -201,4 +201,9 @@ input{
 #ppPic{
 	height: 70px;
 	width: 190px;
+}
+
+/*CSS for selecting portion box*/
+#portionLNT, #portionVT{
+	width:67px;
 }
