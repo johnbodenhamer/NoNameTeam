@@ -77,6 +77,7 @@ td {
   text-align: left;
   padding: 8px;
   font-size: 20px;
+	padding-top: 90px;
 }
 
 h3{
@@ -114,6 +115,10 @@ select{
 #price{
 	text-align: left;
 }
+
+#priceKids{
+	text-align: right;
+}
 /*START of imageSlider */
 .sliderContainer{
 	max-width: 1000px;
@@ -123,14 +128,14 @@ select{
 
 .sliderContainer img{
 	vertical-align: middle;
-	height: 450px;
+	height: 350px;
 	width: 38px;
 }
 
 .slides{
 	display: none;
-	width: 600px;
-	height: 370px;
+	width: 400px;
+	height: 270px;
 }
 
 /*sliderImage Arrows
@@ -190,6 +195,19 @@ select{
 
 .desc{
   padding-left: 100px;
+}
+
+.thPrice{
+ text-align: left;
+}
+
+.thPriceKids{
+	text-align: right;
+}
+
+.kidsMeal{
+	float: right;
+	margin-right: 250px;
 }
 
 input{

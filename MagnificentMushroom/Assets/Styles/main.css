@@ -273,3 +273,29 @@ a.webLocation{
   text-shadow: 5px 2px 3px #333333;
 	color: lightgreen;
 }
+/* Our Story table and pics css*/
+.ourStoryPic{
+	height: 250px;
+	width: 400px;
+	margin-left: 150px;
+}
+
+/*'Where To Find Us css'*/
+.web{
+	color: lightgreen;
+	font-weight: bold;
+	text-shadow: 3px 2px 3px #333333;
+}
+
+.locationPic{
+	height: 230px;
+	width: 400px;
+	float: right;
+	margin-right: 200px;
+}
+
+ img.locationPic:hover{
+	height: 250px;
+	width: 420px;
+	margin-right: 180px;
+}
