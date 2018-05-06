@@ -21,7 +21,7 @@
         <a href="https://www.facebook.com/Lulus-Local-Eatery-132285260224330/"><img src="Assets\Images\fb.png" class="navLogos"/></a>
         <a href="https://www.yelp.com/biz/lulus-restaurant-van-nuys"><img src="Assets\Images\yelp.png" class="navLogos"/></a>
         <a href="Cart.html" id="cartlbl"><span>View Cart</span></a>
-        
+
      </div>
 
     <table id="ordertable">
@@ -29,20 +29,18 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>PICTURE</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
-            <input id="product" name="product" type="text" readonly="readonly" value="Loaded Nacho Crunch Wrap" />
+            <img src="Assets\Images\crunchwarp.png" alt="pic1" height="160" width="160" />
           </td>
-          <td class="desc">
-              jackfruit carnitas, crushed tortilla chips, house-made butternut squash cheese sauce,
-              wrapped in a whole wheat tortilla and grilled to golden brown. served with pickled jalapeño,
-              salsa and sour cream.
+          <td>
+            <input id="product" name="product" type="text" readonly="readonly" value="Loaded Nacho Crunch Wrap" />
           </td>
           <td>
             <input id="price" name="price" type="text" value="$8.95" readonly="readonly" />
@@ -65,8 +63,15 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+          <td class="desc" colspan="4">
+              jackfruit carnitas, crushed tortilla chips, house-made butternut squash cheese sauce,
+              wrapped in a whole wheat tortilla and grilled to golden brown. served with pickled jalapeño,
+              salsa and sour cream.
+          </td>
+        </tr>
       </table>
-      <img src="Assets\Images\crunchwarp.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

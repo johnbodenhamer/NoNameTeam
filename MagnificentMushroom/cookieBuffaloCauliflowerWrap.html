@@ -28,19 +28,18 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>Picute</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
-            <input id="product" name="product" type="text" readonly="readonly" value="Buffalo Cauliflower Wrap" />
+            <img src="Assets\Images\buffalowrapcarrot.jpg" alt="pic1" height="160" width="160" />
           </td>
-          <td class="desc">
-                house-made crispy cauliflower bites on a whole wheat tortilla with greens, shredded carrot,
-                red onion, cucumber, smothered in spicy buffalo sauce and creamy ranch
+          <td>
+            <input id="product" name="product" type="text" readonly="readonly" value="Buffalo Cauliflower Wrap" />
           </td>
           <td>
             <input id="price" name="price" type="text" value="$7.95" readonly="readonly" />
@@ -63,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+          <th>DESCRIPTION</th>
+          <td class="desc" colspan="4">
+                house-made crispy cauliflower bites on a whole wheat tortilla with greens, shredded carrot,
+                red onion, cucumber, smothered in spicy buffalo sauce and creamy ranch
+          </td>
+        </tr>
       </table>
-      <img src="Assets\Images\buffalowrapcarrot.jpg" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

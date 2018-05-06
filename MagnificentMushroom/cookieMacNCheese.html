@@ -28,18 +28,19 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <tH>PICTURE</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
+            <img src="Assets\Images\macncheese.jpg" alt="pic1" height="160" width="160" />
+          </td>
+          <td>
             <input id="product" name="product" type="text" readonly="readonly" value="Mac N Cheese" />
           </td>
-          <td class="desc">organic gluten-less noodles smothered in house-made butternut squash cheese sauce
-  		  topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge<br><i>GL</i></td>
           <td>
             <input id="price" name="price" type="text" value="$4.49" readonly="readonly" />
           </td>
@@ -61,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+          <td class="desc" colspan="4">
+            organic gluten-less noodles smothered in house-made butternut squash cheese sauce
+            topped with walnut parmesan. (make it chili, buffalo, pesto or nacho mac for no extra charge<br>
+            <i>GL</i>
+          </td>
       </table>
-      <img src="Assets\Images\macncheese.jpg" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

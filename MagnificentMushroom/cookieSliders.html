@@ -28,19 +28,18 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>PICTURE</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
-            <input id="product" name="product" type="text" readonly="readonly" value="Slider" />
+            <img src="Assets\Images\sliders.png" alt="pic1" height="160" width="160" />
           </td>
-          <td class="desc">
-              three house-made sweet potato black bean sliders on mini pretzel buns.
-              choose two of our signature sauces: spicy chipotle, ranch, buffalo and butternut squash cheese sauce.
+          <td>
+            <input id="product" name="product" type="text" readonly="readonly" value="Slider" />
           </td>
           <td>
             <input id="price" name="price" type="text" value="$8.95" readonly="readonly" />
@@ -63,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+        <td class="desc" colspan="4">
+            three house-made sweet potato black bean sliders on mini pretzel buns.
+            choose two of our signature sauces: spicy chipotle, ranch, buffalo and butternut squash cheese sauce.
+        </td>
+      </tr>
       </table>
-      <img src="Assets\Images\sliders.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

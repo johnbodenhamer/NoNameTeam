@@ -274,10 +274,15 @@ a.webLocation{
 	color: lightgreen;
 }
 /* Our Story table and pics css*/
-.ourStoryPic{
+#ourStoryPic1, #ourStoryPic2{
 	height: 250px;
 	width: 400px;
 	margin-left: 150px;
+}
+
+img#ourStoryPic1:hover, img#ourStoryPic2:hover{
+	height: 280px;
+	width: 420px;
 }
 
 /*'Where To Find Us css'*/

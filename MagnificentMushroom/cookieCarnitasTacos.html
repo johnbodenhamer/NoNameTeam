@@ -28,20 +28,19 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>PICTURE</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
+            <img src="Assets\Images\jackfruittaco.png" alt="pic1" height="160" width="160" />
+          </td>
+          <td>
             <input id="product" name="product" type="text" readonly="readonly" value="Carnitas Tacos" />
           </td>
-          <td class="desc">
-                    marinated and grilled jackfruit carnitas, diced onion, cilantro, pickled jalapeño,
-                    salsa and house-made butternut squash cheese sauce on soft white corn tortillas.<br><i>GL</i>
-      </td>
           <td>
             <input id="price" name="price" type="text" value="$7.95" readonly="readonly" />
           </td>
@@ -63,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+        <td class="desc" colspan="4">
+                  marinated and grilled jackfruit carnitas, diced onion, cilantro, pickled jalapeño,
+                  salsa and house-made butternut squash cheese sauce on soft white corn tortillas.<br><i>GL</i>
+        </td>
+        <tr>
       </table>
-      <img src="Assets\Images\jackfruittaco.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

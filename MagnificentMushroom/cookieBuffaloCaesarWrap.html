@@ -28,19 +28,18 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>Picture</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
-            <input id="product" name="product" type="text" readonly="readonly" value="Buffalo Caesar Wrap" />
+          <img src="Assets\Images\buffalowrap.png" alt="pic1" height="160" width="160" />
           </td>
-          <td class="desc">
-              house-made crispy buffalo cauliflower bites on a whole wheat tortilla with shredded kale and
-              brussels sprouts with a creamy, house-made caesar dressing and chickpea croutons.
+          <td>
+            <input id="product" name="product" type="text" readonly="readonly" value="Buffalo Caesar Wrap" />
           </td>
           <td>
             <input id="price" name="price" type="text" value="$8.95" readonly="readonly" />
@@ -63,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+          <th>Description</th>
+            <td class="desc" colspan="4">
+                house-made crispy buffalo cauliflower bites on a whole wheat tortilla with shredded kale and
+                brussels sprouts with a creamy, house-made caesar dressing and chickpea croutons.
+            </td>
+        </tr>
       </table>
-      <img src="Assets\Images\buffalowrap.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

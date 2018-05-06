@@ -30,16 +30,17 @@
        </caption>
       <thread>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
+            <img src="Assets\Images\kalesalad.png" alt="pic1" height="160" width="160" />
+          </td>
+          <td>
             <input id="product" name="product" type="text" readonly="readonly" value="Kale Salad" />
           </td>
-          <td class="desc">with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett<br><i>GL - SF</i></td>
           <td>
             <input id="price" name="price" type="text" value="$6.95" readonly="readonly" />
           </td>
@@ -61,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+          <td class="desc" colspan="4">
+            with cranberries, shredded carrot, sunflower seeds and maple mustard vinaigrett<br
+            ><i>GL - SF</i>
+          </td>
+        </tr>
       </table>
-      <img src="Assets\Images\kalesalad.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>

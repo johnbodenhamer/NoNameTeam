@@ -28,19 +28,18 @@
          <h2>Starters</h2>
        </caption>
       <thread>
+        <th>PICTURE</th>
         <th>NAME</th>
-        <th>DESCRIPTION</th>
         <th>PRICES</th>
         <th>QUANTITY</th>
         <th>ADD TO CART</th>
       </thread>
         <tr>
           <td>
+            <img src="Assets\Images\quinoawrap.png" alt="pic1" height="160" width="160" />
+          <td>
+          <td>
             <input id="product" name="product" type="text" readonly="readonly" value="Winter Quinoa Wrap" />
-          </td>
-          <td class="desc">
-                warm quinoa, roasted winter vegetables, shredded carrots, kale, walnut parmesan and
-                cranberries with house-made kale pesto sauce wrapped in a whole wheat tortilla.
           </td>
           <td>
             <input id="price" name="price" type="text" value="$8.95" readonly="readonly" />
@@ -63,8 +62,14 @@
             <button id="submitButton" onclick="addOrder()">Add to Shopping Cart</button>
           </td>
         </tr>
+        <tr>
+        <th>DESCRIPTION</th>
+          <td class="desc" colspan="4">
+                warm quinoa, roasted winter vegetables, shredded carrots, kale, walnut parmesan and
+                cranberries with house-made kale pesto sauce wrapped in a whole wheat tortilla.
+          </td>
+        </tr>
       </table>
-      <img src="Assets\Images\quinoawrap.png" alt="pic1" height="160" width="160" />
     </from>
   </body>
 </html>
